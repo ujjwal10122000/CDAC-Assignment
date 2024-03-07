@@ -1,0 +1,162 @@
+ujjwaldhake@Ujjwal:~$ pwd
+/home/ujjwaldhake
+ujjwaldhake@Ujjwal:~$ cd Assignment/docs
+-bash: cd: Assignment/docs: No such file or directory
+ujjwaldhake@Ujjwal:~$ tree
+.
+├── LinuxAssignment
+│   ├── docs
+│   │   └── file2.txt
+│   └── file1.txt
+├── snap
+│   └── tree
+│       ├── 18
+│       ├── common
+│       └── current -> 18
+├── ujjwalfirst.sh
+├── user1
+│   ├── music
+│   └── photo
+└── user2
+    ├── docs
+    └── videos
+
+13 directories, 3 files
+ujjwaldhake@Ujjwal:~$ LinuxAssignment
+LinuxAssignment: command not found
+ujjwaldhake@Ujjwal:~$ cd LinuxAssignment
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cd docs
+ujjwaldhake@Ujjwal:~/LinuxAssignment/docs$ pwd
+/home/ujjwaldhake/LinuxAssignment/docs
+ujjwaldhake@Ujjwal:~/LinuxAssignment/docs$ cdc..
+cdc..: command not found
+ujjwaldhake@Ujjwal:~/LinuxAssignment/docs$ cd ..
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cd ..
+ujjwaldhake@Ujjwal:~$ pwd
+/home/ujjwaldhake
+ujjwaldhake@Ujjwal:~$ cd
+ujjwaldhake@Ujjwal:~$ pwd
+/home/ujjwaldhake
+ujjwaldhake@Ujjwal:~$ cd LinuxAssignment
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ pwd
+/home/ujjwaldhake/LinuxAssignment
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ sudo apt install zip
+[sudo] password for ujjwaldhake:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 30 not upgraded.
+Need to get 350 kB of archives.
+After this operation, 930 kB of additional disk space will be used.
+Do you want to continue? [Y/n] tar -zcvf docs.zip docs
+Abort.
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ zip -r docs.zip dosc
+Command 'zip' not found, but can be installed with:
+sudo apt install zip
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ zip -r docs.zip docs
+Command 'zip' not found, but can be installed with:
+sudo apt install zip
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ sudo apt install zip
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 30 not upgraded.
+Need to get 350 kB of archives.
+After this operation, 930 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.2 [175 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 zip amd64 3.0-12build2 [176 kB]
+Fetched 350 kB in 3s (110 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 24280 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-26ubuntu3.2_amd64.deb ...
+Unpacking unzip (6.0-26ubuntu3.2) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../zip_3.0-12build2_amd64.deb ...
+Unpacking zip (3.0-12build2) ...
+Setting up unzip (6.0-26ubuntu3.2) ...
+Setting up zip (3.0-12build2) ...
+Processing triggers for man-db (2.10.2-1) ...
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ zip -r docs.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file2.txt (stored 0%)
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ unzip docs.zip
+Archive:  docs.zip
+replace docs/file2.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: t
+error:  invalid response [t]
+replace docs/file2.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename:
+error:  invalid response [{ENTER}]
+replace docs/file2.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: tree
+error:  invalid response [tree]
+replace docs/file2.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: cd ..
+error:  invalid response [cd ..]
+replace docs/file2.txt? [y]es, [n]o, [A]ll, [N]one, [r]ename: ^Cujjwaldhake@Ujjwal:~/LinuxAssignment$
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ pwd
+/home/ujjwaldhake/LinuxAssignment
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ tree
+.
+├── docs
+│   └── file2.txt
+├── docs.zip
+└── file1.txt
+
+1 directory, 3 files
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ mkdir docs1
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ ls
+docs  docs.zip  docs1  file1.txt
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ unzip docs.zi - d docs1
+unzip:  cannot find or open docs.zi, docs.zi.zip or docs.zi.ZIP.
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ unzip docs.zip - d docs1
+Archive:  docs.zip
+caution: filename not matched:  -
+caution: filename not matched:  d
+caution: filename not matched:  docs1
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ unzip docs.zip -d docs1
+Archive:  docs.zip
+   creating: docs1/docs/
+ extracting: docs1/docs/file2.txt
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ ls
+docs  docs.zip  docs1  file1.txt
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cd ..
+ujjwaldhake@Ujjwal:~$ ls
+LinuxAssignment  snap  ujjwalfirst.sh  user1  user2
+ujjwaldhake@Ujjwal:~$ cd LinuxAssignment
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ ls
+docs  docs.zip  docs1  file1.txt
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cd docs1
+ujjwaldhake@Ujjwal:~/LinuxAssignment/docs1$ ls
+docs
+ujjwaldhake@Ujjwal:~/LinuxAssignment/docs1$ cd docs
+ujjwaldhake@Ujjwal:~/LinuxAssignment/docs1/docs$ ls
+file2.txt
+ujjwaldhake@Ujjwal:~/LinuxAssignment/docs1/docs$ cd ..
+ujjwaldhake@Ujjwal:~/LinuxAssignment/docs1$ cd ..
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ ls
+docs  docs.zip  docs1  file1.txt
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cat >>  file1.txt
+^C
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ vi file1.txt
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cat file1.txt
+hii i am ujjwal
+hii i am ujjwal
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cat >> file1.txt
+wdded^C
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cat file1.txt
+hii i am ujjwal
+hii i am ujjwal
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ awk '{gsub(/ujjwal/, "dhake")}' file1.txt
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cat file1.txt
+hii i am ujjwal
+hii i am ujjwal
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ sed 's/ujjwal/dhake/g' file1.txt
+hii i am dhake
+hii i am dhake
+ujjwaldhake@Ujjwal:~/LinuxAssignment$

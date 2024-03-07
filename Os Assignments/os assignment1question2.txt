@@ -1,0 +1,178 @@
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ pwd
+/home/ujjwaldhake/LinuxAssignment
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cat > file3.txt
+a
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccc
+dddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeee
+ffffffffffffffffffffffffff
+gggggggggggggggggggggggggg
+hhhhhhhhhhhhhhhhhhhhhhhhhhh
+iiiiiiiiiiiiiiiiiiiiiiiiiiiii
+jjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+lllllllllllllllllllllllllllll
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+nnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+ooooooooooooooooooooooooooooo
+ppppppppppppppppppppppppppppp
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+rrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+sssssssssssssssssssssssssssss
+tttttttttttttttttttttttttttttt
+uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+wwwwwwwwwwwwwwwwwwwwwwwwwwww
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+zzzzzzzzzzzzzzzzzzzzzzzzzzzzzz^C
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ head -n 10 file3.txt
+a
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbb
+cccccccccccccccccccccccccc
+dddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeee
+ffffffffffffffffffffffffff
+gggggggggggggggggggggggggg
+hhhhhhhhhhhhhhhhhhhhhhhhhhh
+iiiiiiiiiiiiiiiiiiiiiiiiiiiii
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ tail -n 5 file3.txt
+uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+wwwwwwwwwwwwwwwwwwwwwwwwwwww
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cat > number.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20^C
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ head -n 15 number.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ tail -n 3 number.txt
+17
+18
+19
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cat > input.txt
+aaaaaaaaaaaaaaaaaaa
+s
+bbbbbbbbbbbbbbbbb
+ccccccccccccccccccccc
+dddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeee
+rrrrrrrrrrrrrrrrrrr
+hhhhhhhhhhhhhhhh
+bbbbbbbbbbbbbbbbb
+cccccccccccccccc
+eeeeeeeeeeeeeeee
+hhhhhhhhhhhhhhhh
+c
+
+
+
+
+
+
+
+
+
+^C
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ tr [:lower:][:upper:]<input.txt> output.txt
+tr: missing operand after ‘[:lower:][:upper:]’
+Two strings must be given when translating.
+Try 'tr --help' for more information.
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ tr [:lower:][:upper:] <input.txt> output.txt
+tr: missing operand after ‘[:lower:][:upper:]’
+Two strings must be given when translating.
+Try 'tr --help' for more information.
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ tr [:lower:] [:upper:] <input.txt> output.txt
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cat output.txt
+AAAAAAAAAAAAAAAAAAA
+S
+BBBBBBBBBBBBBBBBB
+CCCCCCCCCCCCCCCCCCCCC
+DDDDDDDDDDDDDDDDDDDDDD
+EEEEEEEEEEEEEEEEEEEEEEE
+RRRRRRRRRRRRRRRRRRR
+HHHHHHHHHHHHHHHH
+BBBBBBBBBBBBBBBBB
+CCCCCCCCCCCCCCCC
+EEEEEEEEEEEEEEEE
+HHHHHHHHHHHHHHHH
+C
+
+
+
+
+
+
+
+
+
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ cat >duplicate.txt
+a
+a
+b
+b
+c
+c
+d
+e
+e
+r
+t
+y
+y
+^C
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ uniq duplicate.txt
+a
+b
+c
+d
+e
+r
+t
+y
+ujjwaldhake@Ujjwal:~/LinuxAssignment$ uniq -c duplicate.txt
+      2 a
+      2 b
+      2 c
+      1 d
+      2 e
+      1 r
+      1 t
+      2 y
+ujjwaldhake@Ujjwal:~/LinuxAssignment$
